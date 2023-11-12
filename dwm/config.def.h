@@ -202,6 +202,13 @@ static char urgbgcolor[]                 = "#222222";
 static char urgbordercolor[]             = "#ff0000";
 static char urgfloatcolor[]              = "#db8fd9";
 
+static const char col_base00[]      = "#161616";
+static const char col_base01[]      = "#262626";
+static const char col_base02[]      = "#393939";
+static const char col_base04[]      = "#dde1e6";
+static const char col_base0C[]      = "#ff7eb6";
+static const char col_base0D[]      = "#42be65";
+
 #if RENAMED_SCRATCHPADS_PATCH
 static char scratchselfgcolor[]          = "#FFF7D4";
 static char scratchselbgcolor[]          = "#77547E";
@@ -324,8 +331,8 @@ static const int color_ptrs[][ColCount] = {
 
 static char *colors[][ColCount] = {
 	/*                       fg                bg                border                float */
-	[SchemeNorm]         = { normfgcolor,      normbgcolor,      normbordercolor,      normfloatcolor },
-	[SchemeSel]          = { selfgcolor,       selbgcolor,       selbordercolor,       selfloatcolor },
+	[SchemeNorm]         = { col_base04,      col_base01,      col_base02,      normfloatcolor },
+	[SchemeSel]          = { col_base00,       col_base0D,       col_base0C,       selfloatcolor },
 	[SchemeTitleNorm]    = { titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormfloatcolor },
 	[SchemeTitleSel]     = { titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfloatcolor },
 	[SchemeTagsNorm]     = { tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfloatcolor },
@@ -855,10 +862,10 @@ static const char *dmenucmd[] = {
 	"-m", dmenumon,
 	#endif // NODMENU_PATCH
 	"-fn", dmenufont,
-	"-nb", normbgcolor,
-	"-nf", normfgcolor,
-	"-sb", selbgcolor,
-	"-sf", selfgcolor,
+	"-nb", col_base01,
+	"-nf", col_base04,
+	"-sb", col_base0D,
+	"-sf", col_base00,
 	#if BAR_DMENUMATCHTOP_PATCH
 	topbar ? NULL : "-b",
 	#endif // BAR_DMENUMATCHTOP_PATCH
