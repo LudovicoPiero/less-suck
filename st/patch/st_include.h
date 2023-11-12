@@ -20,7 +20,8 @@
 #if NEWTERM_PATCH
 #include "newterm.h"
 #endif
-#if SCROLLBACK_PATCH || SCROLLBACK_MOUSE_PATCH || SCROLLBACK_MOUSE_ALTSCREEN_PATCH
+#if SCROLLBACK_PATCH || SCROLLBACK_MOUSE_PATCH ||                              \
+    SCROLLBACK_MOUSE_ALTSCREEN_PATCH
 #include "scrollback.h"
 #endif
 #if SIXEL_PATCH

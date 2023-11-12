@@ -30,11 +30,9 @@
 // sale, use or other dealings in this Software without prior written
 // authorization.
 
-#define SIXEL_RGB(r, g, b) (((r) << 16) + ((g) << 8) +  (b))
+#define SIXEL_RGB(r, g, b) (((r) << 16) + ((g) << 8) + (b))
 
-int
-hls_to_rgb(int hue, int lum, int sat)
-{
+int hls_to_rgb(int hue, int lum, int sat) {
   double hs = (hue + 240) % 360;
   double hv = hs / 360.0;
   double lv = lum / 100.0;
@@ -53,7 +51,7 @@ hls_to_rgb(int hue, int lum, int sat)
     c2 = -c2;
   }
   c = (1.0 - c2) * sv;
-  hpi = (int) (hv * 6.0);
+  hpi = (int)(hv * 6.0);
   x = (hpi & 1) ? c : 0.0;
   m = lv - 0.5 * c;
 
@@ -92,9 +90,9 @@ hls_to_rgb(int hue, int lum, int sat)
     return SIXEL_RGB(255, 255, 255);
   }
 
-  r = (int) ((r1 + m) * 100.0 + 0.5);
-  g = (int) ((g1 + m) * 100.0 + 0.5);
-  b = (int) ((b1 + m) * 100.0 + 0.5);
+  r = (int)((r1 + m) * 100.0 + 0.5);
+  g = (int)((g1 + m) * 100.0 + 0.5);
+  b = (int)((b1 + m) * 100.0 + 0.5);
 
   if (r < 0) {
     r = 0;
