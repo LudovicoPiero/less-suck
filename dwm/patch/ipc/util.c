@@ -1,9 +1,7 @@
 #include <errno.h>
 #include <sys/stat.h>
 
-int
-normalizepath(const char *path, char **normal)
-{
+int normalizepath(const char *path, char **normal) {
   size_t len = strlen(path);
   *normal = (char *)malloc((len + 1) * sizeof(char));
   const char *walk = path;
@@ -36,9 +34,7 @@ normalizepath(const char *path, char **normal)
   return 0;
 }
 
-int
-parentdir(const char *path, char **parent)
-{
+int parentdir(const char *path, char **parent) {
   char *normal;
   char *walk;
 
@@ -64,9 +60,7 @@ parentdir(const char *path, char **parent)
   return 0;
 }
 
-int
-mkdirp(const char *path)
-{
+int mkdirp(const char *path) {
   char *normal;
   char *walk;
   size_t normallen;
@@ -121,16 +115,13 @@ mkdirp(const char *path)
   return 0;
 }
 
-int
-nullterminate(char **str, size_t *len)
-{
+int nullterminate(char **str, size_t *len) {
   if ((*str)[*len - 1] == '\0')
     return 0;
 
   (*len)++;
-  *str = (char*)realloc(*str, *len * sizeof(char));
+  *str = (char *)realloc(*str, *len * sizeof(char));
   (*str)[*len - 1] = '\0';
 
   return 0;
 }
-

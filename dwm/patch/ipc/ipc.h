@@ -302,8 +302,9 @@ void ipc_send_events(Monitor *mons, Monitor **lastselmon, Monitor *selmon);
  * or handling incoming messages or unhandled epoll event.
  */
 int ipc_handle_client_epoll_event(struct epoll_event *ev, Monitor *mons,
-                                  Monitor **lastselmon, Monitor *selmon, const int tags_len,
-                                  const Layout *layouts, const int layouts_len);
+                                  Monitor **lastselmon, Monitor *selmon,
+                                  const int tags_len, const Layout *layouts,
+                                  const int layouts_len);
 
 /**
  * Handle an epoll event caused by the IPC socket. This function only handles an
@@ -317,4 +318,3 @@ int ipc_handle_client_epoll_event(struct epoll_event *ev, Monitor *mons,
 int ipc_handle_socket_epoll_event(struct epoll_event *ev);
 
 #endif /* IPC_H_ */
-

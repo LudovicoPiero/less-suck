@@ -1,7 +1,7 @@
 /* Bar functionality */
+#include "bar.h"
 #include "bar_indicators.h"
 #include "bar_tagicons.h"
-#include "bar.h"
 
 #if BAR_ALPHA_PATCH
 #include "bar_alpha.h"
@@ -104,7 +104,8 @@
 #if ASPECTRESIZE_PATCH
 #include "aspectresize.h"
 #endif
-#if ATTACHABOVE_PATCH || ATTACHASIDE_PATCH || ATTACHBELOW_PATCH || ATTACHBOTTOM_PATCH || SEAMLESS_RESTART_PATCH
+#if ATTACHABOVE_PATCH || ATTACHASIDE_PATCH || ATTACHBELOW_PATCH ||             \
+    ATTACHBOTTOM_PATCH || SEAMLESS_RESTART_PATCH
 #include "attachx.h"
 #endif
 #if AUTOSTART_PATCH
@@ -244,7 +245,8 @@
 #if SETBORDERPX_PATCH
 #include "setborderpx.h"
 #endif
-#if SHIFTBOTH_PATCH || SHIFTSWAPTAGS_PATCH || SHIFTTAG_PATCH || SHIFTTAGCLIENTS_PATCH || SHIFTVIEW_PATCH || SHIFTVIEW_CLIENTS_PATCH
+#if SHIFTBOTH_PATCH || SHIFTSWAPTAGS_PATCH || SHIFTTAG_PATCH ||                \
+    SHIFTTAGCLIENTS_PATCH || SHIFTVIEW_PATCH || SHIFTVIEW_CLIENTS_PATCH
 #include "shift.h"
 #endif
 #if SHIFTBOTH_PATCH
@@ -382,4 +384,3 @@
 #if TILE_LAYOUT
 #include "layout_tile.h"
 #endif
-

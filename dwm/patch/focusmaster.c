@@ -1,14 +1,11 @@
-void
-focusmaster(const Arg *arg)
-{
-	Client *c;
+void focusmaster(const Arg *arg) {
+  Client *c;
 
-	if (selmon->nmaster < 1)
-		return;
+  if (selmon->nmaster < 1)
+    return;
 
-	c = nexttiled(selmon->clients);
+  c = nexttiled(selmon->clients);
 
-	if (c)
-		focus(c);
+  if (c)
+    focus(c);
 }
-

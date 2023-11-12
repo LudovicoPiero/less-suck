@@ -1,7 +1,4 @@
-void
-togglealttag()
-{
-	selmon->alttag = !selmon->alttag;
-	drawbar(selmon);
+void togglealttag() {
+  selmon->alttag = !selmon->alttag;
+  drawbar(selmon);
 }
-

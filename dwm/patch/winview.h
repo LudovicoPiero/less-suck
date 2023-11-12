@@ -1,2 +1,1 @@
-static void winview(const Arg* arg);
-
+static void winview(const Arg *arg);

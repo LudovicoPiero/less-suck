@@ -1,6 +1,6 @@
 typedef struct {
-	const char * sig;
-	void (*func)(const Arg *);
+  const char *sig;
+  void (*func)(const Arg *);
 } Signal;
 
 static void setlayoutex(const Arg *arg);
@@ -11,4 +11,3 @@ static void tagex(const Arg *arg);
 static void toggletagex(const Arg *arg);
 static void tagallex(const Arg *arg);
 static int fake_signal(void);
-

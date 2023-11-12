@@ -1,8 +1,5 @@
-void
-togglenomodbuttons(const Arg *arg)
-{
-	nomodbuttons = !nomodbuttons;
-	if (selmon->sel)
-		grabbuttons(selmon->sel, 1);
+void togglenomodbuttons(const Arg *arg) {
+  nomodbuttons = !nomodbuttons;
+  if (selmon->sel)
+    grabbuttons(selmon->sel, 1);
 }
-

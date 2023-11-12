@@ -1,11 +1,11 @@
-#define COMMANDMODE             1
-#define INSERTMODE              2
+#define COMMANDMODE 1
+#define INSERTMODE 2
 
 typedef struct {
-	unsigned int mod[4];
-	KeySym keysym[4];
-	void (*func)(const Arg *);
-	const Arg arg;
+  unsigned int mod[4];
+  KeySym keysym[4];
+  void (*func)(const Arg *);
+  const Arg arg;
 } Command;
 
 static void clearcmd(const Arg *arg);
@@ -19,4 +19,3 @@ static void setkeymode(const Arg *arg);
 static unsigned int cmdmod[4];
 static unsigned int keymode = INSERTMODE;
 static KeySym cmdkeysym[4];
-
